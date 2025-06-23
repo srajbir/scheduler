@@ -59,6 +59,7 @@ function ScrollAndRoutes({ darkMode, setDarkMode }) {
         }/>
         <Route path="/about" element={<About />} />
       </Routes>
+      <main/>
       <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
     </>
   );
