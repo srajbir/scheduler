@@ -1,0 +1,170 @@
+.about-section {
+  animation: fadeInUp 0.6s ease-in-out;
+  padding: 32px 64px;
+  margin: 24px 5px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: inherit;
+}
+
+body.dark-mode .about-section {
+  background-color: rgba(31, 31, 31, 0.6);
+  color: #fff;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center;
+  color: inherit;
+}
+
+/* ========== BLOCK STRUCTURE ========== */
+.about-block {
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 24px;
+}
+
+body.dark-mode .about-block {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ========== ICON + SUBTITLE ========== */
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.about-icon {
+  flex-shrink: 0;
+  color: #3d5cc2;
+}
+
+body.dark-mode .about-icon {
+  color: #5a78f0;
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color:#3d5cc2;
+}
+
+body.dark-mode .about-subtitle {
+  color:#5a78f0;
+}
+
+/* ========== TEXT STYLING ========== */
+.about-text,
+.about-footer {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 16px;
+}
+
+/* ========== FEATURE LISTS ========== */
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 16px;
+}
+
+.about-list > li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.about-list > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  background-color: #3d5cc2;
+  border-radius: 50%;
+}
+
+body.dark-mode .about-list > li::before {
+  background-color: #5a78f0;
+}
+
+/* Sublist styling - no duplicate dot */
+.about-sublist {
+  list-style: none;
+  padding-left: 16px;
+  margin: 12px 0 16px 8px;
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+.about-sublist li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+}
+
+.about-sublist li::before {
+  content: "–"; /* En dash */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #3d5cc2;
+  font-weight: bold;
+}
+
+/* Nested list heading */
+.about-nested-heading {
+  font-weight: 600;
+  margin-bottom: 4px;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 24px 20px;
+  }
+
+  .about-title {
+    font-size: 1.7rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .about-text,
+  .about-footer {
+    font-size: 1rem;
+  }
+
+  .about-header {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+/* ========== ANIMATION ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

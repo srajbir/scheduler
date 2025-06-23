@@ -1,0 +1,55 @@
+/* ========== GLOBAL THEME STYLES ========== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+  background-color: #e6e6e6;
+  color: #000;
+}
+
+body.dark-mode {
+  background-color: #0d1117;
+  color: #fff;
+}
+
+/* ========== SCROLL PROGRESS ========== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #273b7a;
+  width: 0%;
+  z-index: 9999;
+}
+
+/* ========================================
+   ========== GLOBAL SCROLLBAR =============
+======================================== */
+
+/* WebKit Browsers (Chrome, Edge, Brave, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Firefox */
+html {
+  scrollbar-color: rgba(100, 100, 100, 0.4) transparent;
+  scrollbar-width: thin;
+}
+

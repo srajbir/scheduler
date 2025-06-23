@@ -1,0 +1,221 @@
+/* ========== FOOTER CONTAINER ========== */
+.footer {
+  animation: fadeInUp 0.6s ease-in-out;
+  padding: 40px 24px;
+  border-radius: 20px;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  color: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== GRID STRUCTURE ========== */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+  text-align: left;
+}
+
+/* ========== SECTION STYLING ========== */
+.section h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section ul li {
+  margin-bottom: 0.4rem;
+}
+
+/* ========== LOGO AREA ========== */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* ========== LINK STYLES ========== */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  color: inherit;
+  padding-bottom: 4px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3d5cc2;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #3d5cc2;
+}
+
+/* ========== THEME TOGGLE ========== */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 6px;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover .theme-icon {
+  transform: scale(1.3);
+}
+
+.theme-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+/* ========== INLINE SECTION (LINKS + THEME TOGGLE) ========== */
+.footer-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.footer-inline .section {
+  flex: 1 1 auto;
+  min-width: 140px;
+}
+
+.section-theme {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.section-theme .theme-toggle {
+  margin-left: auto;
+}
+
+/* ========== FOOTER BOTTOM ========== */
+.footer-bottom {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.back-to-top {
+  text-decoration: none;
+  font-weight: 500;
+  color: #3d5cc2;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.back-to-top:hover {
+  color: #273b7a;
+  transform: scale(1.1);
+}
+
+/* ========== DARK MODE ========== */
+body.dark-mode .footer {
+  background-color: rgba(31, 31, 31, 0.6);
+  color: #fff;
+}
+
+body.dark-mode .footer-bottom {
+  color: #aaa;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .nav-link:hover {
+  color: #5a78f0;
+}
+
+body.dark-mode .nav-link::after {
+  background-color: #5a78f0;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 24px 16px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-inline {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  .footer-inline .section {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+/* ========== ANIMATION ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
