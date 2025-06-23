@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowUp } from "lucide-react";
 import "./Footer.css";
+import gearIcon from '../assets/gear.svg';
+import moonIcon from '../assets/moon.svg';
+import sunIcon from '../assets/sun.svg';
 
 function Footer({ darkMode, setDarkMode }) {
   const scrollToTop = () => {
@@ -12,7 +15,7 @@ function Footer({ darkMode, setDarkMode }) {
       <div className="footer-grid">
         <div className="section logo-info">
           <Link to="/" className="footer-logo">
-            <img src="/gear.svg" alt="Scheduler Logo" />
+            <img src={gearIcon} alt="Scheduler Logo" />
             <span>SCHEDULAR</span>
           </Link>
           <p>Scheduling made simple. Visualize. Analyze. Optimize.</p>
@@ -36,7 +39,7 @@ function Footer({ darkMode, setDarkMode }) {
               aria-label="Toggle Theme"
             >
               <img
-                src={darkMode ? "/sun.svg" : "/moon.svg"}
+                src={darkMode ? {sunIcon} : {moonIcon}}
                 alt="Toggle Theme"
                 className="theme-icon"
               />

@@ -1,5 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
 import "./Nav.css";
+import gearIcon from '../assets/gear.svg';
+import homeIcon from '../assets/home.svg';
+import aboutIcon from '../assets/about.svg';
+import moonIcon from '../assets/moon.svg';
+import sunIcon from '../assets/sun.svg';
 
 function Nav({ darkMode, setDarkMode }) {
   const location = useLocation();
@@ -7,7 +12,7 @@ function Nav({ darkMode, setDarkMode }) {
   return (
     <div className="nav-container">
       <div className="title-container">
-        <img src="/gear.svg" alt="Scheduler" />
+        <img src={gearIcon} alt="Scheduler" />
         <span>SCHEDULER</span>
       </div>
 
@@ -17,7 +22,7 @@ function Nav({ darkMode, setDarkMode }) {
           className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
         >
           <span className="nav-text">Home</span>
-          <img src="/home.svg" alt="Home" className="nav-icon mobile-only" />
+          <img src={homeIcon} alt="Home" className="nav-icon mobile-only" />
         </Link>
 
         <Link
@@ -25,7 +30,7 @@ function Nav({ darkMode, setDarkMode }) {
           className={`nav-link ${location.pathname === "/about" ? "active" : ""}`}
         >
           <span className="nav-text">About</span>
-          <img src="/about.svg" alt="About" className="nav-icon mobile-only" />
+          <img src={aboutIcon} alt="About" className="nav-icon mobile-only" />
         </Link>
 
         <button
@@ -34,7 +39,7 @@ function Nav({ darkMode, setDarkMode }) {
           title="Toggle Theme"
         >
           <img
-            src={darkMode ? "/sun.svg" : "/moon.svg"}
+            src={darkMode ? {sunIcon} : {moonIcon}}
             alt="Theme Toggle"
             className="theme-icon"
           />

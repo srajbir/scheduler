@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { updateInputJob, removeJob } from './JobSlice';
 import JobInputForm from './JobInputForm';
 import './scheduler.css';
-
+import binIcon from '../assets/bin.svg';
 function InputTable() {
   const jobs = useSelector((state) => state.jobs.jobsInput);
   const dispatch = useDispatch();
@@ -99,7 +99,7 @@ function InputTable() {
                 </td>
                 <td>
                   <button onClick={() => handleRemove(job.id)}>
-                    <img src="/bin.svg" alt="Remove" className="bin-icon" />
+                    <img src={binIcon} alt="Remove" className="bin-icon" />
                   </button>
                 </td>
               </tr>
