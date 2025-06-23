@@ -39,7 +39,7 @@ function Footer({ darkMode, setDarkMode }) {
               aria-label="Toggle Theme"
             >
               <img
-                src={darkMode ? {sunIcon} : {moonIcon}}
+                src={darkMode ? sunIcon : moonIcon}
                 alt="Toggle Theme"
                 className="theme-icon"
               />

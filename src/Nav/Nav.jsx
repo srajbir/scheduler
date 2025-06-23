@@ -39,7 +39,7 @@ function Nav({ darkMode, setDarkMode }) {
           title="Toggle Theme"
         >
           <img
-            src={darkMode ? {sunIcon} : {moonIcon}}
+            src={darkMode ? sunIcon : moonIcon}
             alt="Theme Toggle"
             className="theme-icon"
           />
